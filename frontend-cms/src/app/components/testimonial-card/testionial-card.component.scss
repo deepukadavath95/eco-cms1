@@ -1,0 +1,37 @@
+.testimonial
+{
+    background: #eee;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 25px 15px;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    // overflow: hidden;
+}
+
+
+.details
+{
+    
+}
+
+.img
+{  
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.writings
+{   
+    padding: 0 1rem;
+}
+
+.bottom-details
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+    
+}
