@@ -6,24 +6,20 @@
     margin: 25px 15px;
     display: flex;
     align-items: center;
-    // justify-content: center;
-    // overflow: hidden;
 }
 
 
-.details
-{
-    
-}
 
 .img
-{  
-    border-radius: 12px;
+{
+    width: 90px !important;
+    height: 90px;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .writings
-{   
+{
     padding: 0 1rem;
 }
 

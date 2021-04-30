@@ -19,7 +19,7 @@ export class HomepageComponent implements OnInit {
     loop:true,
     responsiveClass:true,
     autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:4000,
     margin:10,
     rewind:false,
     // lazyLoadEager:4,
@@ -29,15 +29,22 @@ export class HomepageComponent implements OnInit {
     responsive:{
         0:{
             items:1,
-            nav:false
+            nav:false,
+            center:true
+        },
+        500:{
+          items:2,
+          nav:false,
+          center:true
+
         },
         600:{
-            items:2,
+            items:3,
             nav:false
         },
         1000:{
             items:4,
-            nav:true,
+            nav:false,
             
         }
     }

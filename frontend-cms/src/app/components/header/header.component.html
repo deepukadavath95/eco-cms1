@@ -1,19 +1,51 @@
-<div class="header">
+<nav class="navbar navbar-expand-lg navbar-light">
     
-        <div class="image">
-            <!-- <img src="C:/Users/NAJMAL JAMAL/Downloads/12bcc40e811c4effa6b912f947b34ab9.png" width="100px" height="100%" alt="" class="rc"> -->
-            <p class=" align-self-center pt-3 "><b> KISMET CAFE </b></p>
-        </div>
+    <div class="left">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><b> KISMET CAFE </b></a>
 
-        
-        <div class="navbar-details">
-            <li style="list-style: none;">Home </li>
-                <li style="list-style: none;">Service </li>
-                <li style="list-style: none;">Shop </li>
-                <li style="list-style: none;">Blog</li>
-                <li style="list-style: none;">About Us</li>
+    </div>
+
+    <div class="rightbutton ">
+        <button type="button" class="btn login mr-2" [routerLink]="'/login'">Log In</button>
+        <div class="vl"></div>
+        <button type="button" class=" btn signup">Sign Up</button>
+    </div>
+
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="'/homepage'">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="'/blogs'">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="'/products'">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="'/service'">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" [routerLink]="'/about'">About</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="d-flex justify-content-center searchbar h-100">
+                <input class="search_input mx-4" type="text"  placeholder="Search...">
+                <a href="" class="search_icon"><i class="fa fa-search"></i></a>
+            </div>
             
         </div>
-    
-</div>
 
+    
+    
+    
+
+    
+        
+</nav>

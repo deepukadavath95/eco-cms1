@@ -1,4 +1,4 @@
-<div class="card" *ngIf="data">
+<div class="card" [routerLink]="'/blogs/'+data.id" *ngIf="data">
     <div class="row">
         <div class="col">
             <img class="profile" [src]=data.Author.image height="50px" width="50px">    
@@ -7,7 +7,7 @@
             <p><b>{{data.Author.author_name}}</b></p>    
         </div>
     </div>
-    <img class="image px-3" [src]="data.image" width="300px" height="300px">
+    <img class="image px-3" [src]="data.image" width="200px" height="200px">
     <div class="px-3 text-center">
         <h5 class="title">{{data.title}}</h5>
         <p class="desc">{{data.content}}</p>

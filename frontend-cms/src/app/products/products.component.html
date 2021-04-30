@@ -1,0 +1,10 @@
+<div class="container">
+    <header></header>
+    <h1>OUR STORE</h1>
+    <div class="row products" style="width: 100%;">
+        <div class="col-sm-12 col-md-4"  [routerLink]="'/products/'+p.id" *ngFor="let p of productModel">
+            <product-card [data]="p"></product-card>
+        </div>
+    </div>
+    <footer></footer>
+</div>

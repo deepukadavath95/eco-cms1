@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProductCardComponent } from './product-card/product.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
 import { TestimonialCardComponent } from './testimonial-card/testionial-card.component';
+import {RouterModule,Router} from '@angular/router';
 
 
 
@@ -22,11 +23,14 @@ import { TestimonialCardComponent } from './testimonial-card/testionial-card.com
     HeaderComponent,
     ProductCardComponent,
     ServiceCardComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
+    
+   
   ],
   imports: [
     CommonModule,
-    OwlModule
+    OwlModule,
+    RouterModule
   ],
   exports: [
     BlogCardComponent,
@@ -36,7 +40,8 @@ import { TestimonialCardComponent } from './testimonial-card/testionial-card.com
     HeaderComponent,
     ProductCardComponent,
     ServiceCardComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
+    
   ]
 })
 export class ComponentsModule { }

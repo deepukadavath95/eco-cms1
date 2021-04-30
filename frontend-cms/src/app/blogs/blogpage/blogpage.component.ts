@@ -13,6 +13,36 @@ export class BlogpageComponent implements OnInit {
   values:any;
   constructor(private activatedRoute:ActivatedRoute, private http:HttpClient) { }
 
+  sliderOptions: any = {
+    loop:true,
+    responsiveClass:true,
+    autoplay:true,
+    autoplayHoverPause:true,
+    autoplayTimeout:1000,
+    margin:10,
+    rewind:false,
+    // lazyLoadEager:4,
+    dots:false,
+    
+    // autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:false,
+            
+        }
+    }
+    
+  }
+
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(data=>{
       let id=data.get('id');

@@ -5,7 +5,8 @@ import { BlogsRoutingModule } from './blogs-routing.module';
 import { BlogsComponent } from './blogs.component';
 import { ComponentsModule } from '../components/components.module';
 import { BlogpageComponent } from './blogpage/blogpage.component';
-
+import { OwlModule } from 'ngx-owl-carousel';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { BlogpageComponent } from './blogpage/blogpage.component';
   imports: [
     CommonModule,
     BlogsRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    OwlModule,
+    RouterModule
   ]
 })
 

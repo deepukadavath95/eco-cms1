@@ -1,0 +1,52 @@
+.service
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.content
+{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    // flex-grow: 1;
+}
+
+p{
+    text-align: center; 
+    /* font-size: 12px; */
+    // display: -webkit-box;
+    /* overflow: hidden; */
+    /* -webkit-line-clamp: 4; */
+    /* -webkit-box-orient: vertical; */
+    /* text-overflow: ellipsis; */
+    line-height: 2;
+   
+    padding: 10px;
+}
+
+hr
+{
+    border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#FFFF00;
+  height: 1px;
+
+}
+
+h1{
+    color: #eab619;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.img
+{
+    flex-grow: 1;
+}

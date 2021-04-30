@@ -1,45 +1,30 @@
+<div class="container">
 <header></header>
-
-    <div class="wrapper mx-5" *ngIf="blogbyid">
-        <div class="left box px-5 py-5">
-            <p class="align-self-center"><b> Recent blogs</b></p>
-            <div class="row" [routerLink]="'/blogs/'+value.id" *ngFor="let value of values | slice:0:3">
-                <blog-card [data]=value></blog-card>
+    <div class="" *ngIf="blogbyid">
+        <div class="main row mt-5">
+            <div class="col-md-7 col-sm-12">
+                <img [src]="blogbyid.image" width="100%" alt="" class="bimage"><br>
+                <p><b>{{blogbyid.title}}</b></p><br>
+                <p>{{blogbyid.content}}</p>
+            </div>
+            <div class="right col-md-5 col-sm-12">
+                <p id ="author">{{blogbyid.Author.author_name}}</p>
+                <img  [src]="blogbyid.Author.image" alt="">
+                <p class="author my-5"><b> Author blogs</b></p>
             </div>
         </div>
-        <div class="center box px-5">
-            <img [src]="blogbyid.image" width="100%" alt="">
-            <p><b>{{blogbyid.title}}</b></p>
-            <p>{{blogbyid.content}}</p>
-        </div>
-        <div class="right box px-5 py-5">
-            <p>{{blogbyid.Author.author_name}}</p>
-            <img  [src]="blogbyid.Author.image" alt="">
-            <p class="author my-5"><b> Author blogs</b></p>
-            
-
-        </div>
-    </div>
-<!-- 
-    <div class="container">
-        <div class="main">
-            <img [src]="blogbyid.image" alt="">
-                <p><b>{{blogbyid.title}}</b></p>
-                <p>{{blogbyid.content}}</p>
-        </div>
-        <div class="right">
-            <p>{{blogbyid.Author.author_name}}</p>
-            <img  [src]="blogbyid.Author.image" alt="">
-            <p class="author"><b> Author blogs</b></p>
-        </div>
-        <div class="bottom">
-            <p class="align-self-center"><b> Recent blogs</b></p>
-            <div class="row" >
-                <div class="col" [routerLink]="'/blogs/'+value.id" *ngFor="let value of values | slice:0:3">
+        <hr>
+            <owl-carousel
+                [options]="sliderOptions"
+                [items]="values"
+                [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="item" *ngFor="let value of values">
                     <blog-card [data]=value></blog-card>
                 </div>
-            </div>
-        </div>
-    </div> -->
+            </owl-carousel>
+        
+
+    </div>
 
 <footer></footer>
+</div>
