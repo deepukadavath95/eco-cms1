@@ -1,7 +1,59 @@
+ <h3 style="color: #eab619;">Our Store</h3>
+    <hr>
 
-<div class="pbuttons container">
-    <button type="button" class="btn btn-warning" routerLink="'/addproduct'">Add</button>
-    <button type="button" class="btn btn-warning">Delete</button>
-    <button type="button" class="btn btn-warning">Update</button>
-</div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            
+            <th scope="col">productName</th>
+            <th scope="col">Image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Description</th>
+            <th scope="col">ProductCategory</th>
+            <th scope="col">MetaTag</th>
+            <th scope="col">MetaDescription</th>
+            <th scope="col">MetaTitle</th>
+            <th scope="col">ExtraMeta</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+                <td><input type="text" class="form-control"  name="productName" required></td>
+                <td><input type="file" name="image" (change)="onFileSelect($event)" required></td>
+                <td><input type="text" class="form-control"  name="price" required></td>
+                <td><input type="text" class="form-control"  name="rating" required></td>
+                <td><input type="text" class="form-control"  name="description" required></td>
+                <td><input type="text" class="form-control"  name="category_id" required></td>
+                <td><input type="text" class="form-control"  name="meta_tags" required></td>
+                <td><input type="text" class="form-control"  name="meta_description" required></td>
+                <td><input type="text" class="form-control"  name="meta_title" required></td>
+                <td><input type="text" class="form-control"  name="Extra_meta" required></td>
+                <td><button type="button" class="btn btn-success" (click)="addproduct()">Add </button></td>
+          </tr>
+             
+           
 
+          <tr *ngFor="let p of productModel">
+            
+            <td>{{p.product_name}}</td>
+            <td><img class ="image" [src]="p.image" alt="" class="src" width="100"></td>
+            <td>{{p.price}}</td>
+            <td>{{p.rating}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.meta_tags}}</td>
+            <td>{{p.meta_description}}</td>
+            <td>{{p.category_id}}</td>
+            <td>{{p.meta_title}}</td>
+            <td>{{p.extra_meta}}</td>
+            <td><button type="button" class="btn btn-warning" [routerLink]="'/products/editproduct'" >Edit</button></td>
+            <td><button type="button" class="btn btn-danger" [routerLink]="'/products/deleteproduct'">Delete</button></td>
+          </tr>
+        
+        </tbody>
+      </table>
+
+   

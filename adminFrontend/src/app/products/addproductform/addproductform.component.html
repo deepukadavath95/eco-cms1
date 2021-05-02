@@ -1,0 +1,64 @@
+<div class="container">
+    
+        <h3 style="color: #eab619;">ADD PRODUCTS</h3>
+        <hr>
+        <form enctype="multipart/form-data" method="POST">
+            <div class="mb-3 row">
+                <label for="productName" class="col-sm-2 col-form-label">productName</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control"  name="productName" id="productName" placeholder="enter....." required>
+                </div>
+
+                <label for="Description" class="col-sm-2 col-form-label">Description of product</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" name="description" id="Description" rows="3" required placeholder="enter....."></textarea>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="price" class="col-sm-2 col-form-label">Price</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="price" id="price" placeholder="0.00" required> 
+                </div>
+                <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" name="rating" id="rating" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="metaTittle" class="col-sm-2 col-form-label">Meta_tittle</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" name="metaTittle" id="metaTittle" rows="2" placeholder="enter....." required></textarea> 
+                </div>
+                <label for="metaTags" class="col-sm-2 col-form-label">Meta_Tags</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" name="metaTags" id="metaTags" rows="2" placeholder="enter....." required ></textarea>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="metaDescription" class="col-sm-2 col-form-label">Meta_description</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" name="metaDescription" id="metaDescription" rows="2" placeholder="enter....." required ></textarea> 
+                </div>
+                <label for="extraMeta" class="col-sm-2 col-form-label">Extra_meta</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" name="extraMeta" id="extraMeta" rows="2" placeholder="enter....." required></textarea>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="image" class="col-sm-2 col-form-label">Choose Image</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="image" type="file" required>
+                </div>
+            </div>
+
+            <div class="mb-3 form">
+                <button type="button" class="btn btn-warning" (click)=addproduct() >Submit</button>
+            </div>
+
+    </form>
+
+</div>
